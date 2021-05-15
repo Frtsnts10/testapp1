@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:testapp1/Pages/Profile.dart';
-import 'package:testapp1/Pages/Settings.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -30,12 +30,11 @@ class _HomeState extends State<Home> {
                       Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Profile()));
                     },
-                    elevation: 2.0,
                     child: Icon(
-                      Icons.person_outline_rounded,
+                      Ionicons.person_outline,
                       color: Colors.white,
                     ),
-                    padding: EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10),
                     shape: CircleBorder(),
                     color: Colors.black,
                   ),

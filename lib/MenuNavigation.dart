@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:testapp1/Pages/Home.dart';
 import 'package:testapp1/Pages/Library.dart';
 import 'package:testapp1/Pages/Profile.dart';
@@ -20,7 +21,7 @@ class _MenuScreenState extends State<MenuScreen> {
       appBar: AppBar(
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
-          elevation: 1.5,
+          elevation: 0,
           actions: [
             TextButton(
                 onPressed: () {
@@ -28,7 +29,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       MaterialPageRoute(builder: (context) => Options()));
                 },
                 child: Icon(
-                  Icons.settings,
+                  Ionicons.settings_outline,
                   color: Colors.black,
                 )),
           ],
@@ -39,15 +40,15 @@ class _MenuScreenState extends State<MenuScreen> {
         currentIndex: selectedIndex,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.music_note),
+            icon: Icon(Ionicons.musical_notes_outline),
             label: 'Listen Now',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Ionicons.search_outline),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_music),
+            icon: Icon(Ionicons.book),
             label: 'Library',
           ),
         ],
