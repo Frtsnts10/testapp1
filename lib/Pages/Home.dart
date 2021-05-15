@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp1/Pages/Profile.dart';
 import 'package:testapp1/Pages/Settings.dart';
 
 class Home extends StatefulWidget {
@@ -25,7 +26,10 @@ class _HomeState extends State<Home> {
                 Container(
                   padding: EdgeInsets.only(left: 90),
                   child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Profile()));
+                    },
                     elevation: 2.0,
                     child: Icon(
                       Icons.person_outline_rounded,

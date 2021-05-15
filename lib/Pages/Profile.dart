@@ -4,9 +4,14 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        elevation: 0,
+      ),
         backgroundColor: Colors.white,
         body: Container(
-          padding: EdgeInsets.only(top: 100),
+          padding: EdgeInsets.only(top: 50),
           child: Center(
               child: Column(children: [
             Column(
