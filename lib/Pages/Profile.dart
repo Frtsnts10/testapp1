@@ -120,12 +120,30 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                     color: Color(0xFF1DD860),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Edit()));
+                    },
                   ),
                 )
               ],
             ),
           ])),
         ));
+  }
+}
+
+
+class Edit extends StatefulWidget {
+  @override
+  _EditState createState() => _EditState();
+}
+
+class _EditState extends State<Edit> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
   }
 }

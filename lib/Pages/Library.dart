@@ -12,8 +12,7 @@ class _LibraryState extends State<Library> {
     return Scaffold(
         body: Container(
             padding: EdgeInsets.only(top: 20, left: 30, right: 20),
-            child: Column(
-              children: [
+            child: Column(children: [
               Row(children: [
                 Container(
                   child: Text(
@@ -35,54 +34,65 @@ class _LibraryState extends State<Library> {
                 color: Colors.black45,
                 endIndent: 20,
               ),
-
               Column(
                 children: [
-                  TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Ionicons.musical_note),
-                          label: Text(
-                            'Playlist',
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                            
-                          )),
+                  Container(
+                      child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: TextButton.icon(
+                        onPressed: () {},
+                        icon: Icon(Ionicons.list_outline),
+                        label: Text(
+                          'Playlist',
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        )),
+                  )),
                   Divider(
                     color: Colors.black45,
                     endIndent: 20,
                   ),
                   Container(
-                      child: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Icons.featured_play_list),
-                          label: Text(
-                            'Albums',
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                          ))),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: TextButton.icon(
+                              onPressed: () {},
+                              icon: Icon(Ionicons.albums),
+                              label: Text(
+                                'Albums',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.black),
+                              )))),
                   Divider(
                     color: Colors.black45,
                     endIndent: 20,
                   ),
                   Container(
-                      child: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Icons.featured_play_list),
-                          label: Text(
-                            'Songs',
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                            textAlign: TextAlign.start,
-                          ))),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: TextButton.icon(
+                              onPressed: () {},
+                              icon: Icon(Ionicons.musical_notes),
+                              label: Text(
+                                'Songs',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.black),
+                                textAlign: TextAlign.start,
+                              )))),
                   Divider(
                     color: Colors.black45,
                     endIndent: 20,
                   ),
                   Container(
-                      child: TextButton.icon(
-                          onPressed: () {},
-                          icon: Icon(Ionicons.cloud_download),
-                          label: Text(
-                            'Downloaded',
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                          ))),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: TextButton.icon(
+                              onPressed: () {},
+                              icon: Icon(Ionicons.cloud_download),
+                              label: Text(
+                                'Downloaded',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.black),
+                              )))),
                   Divider(
                     color: Colors.black45,
                     endIndent: 20,

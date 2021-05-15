@@ -5,7 +5,7 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            padding: EdgeInsets.only(left: 10, right: 10, top: 20),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 10),
             child: Column(children: [
               Column(children: [
                 Text(

@@ -13,10 +13,10 @@ class _OptionsState extends State<Options> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Ionicons.arrow_back_circle_outline),
+          icon: Icon(Ionicons.arrow_back_outline, color: Colors.black,),
           onPressed: () {
             Navigator.pop(context, true);
           },
@@ -25,9 +25,10 @@ class _OptionsState extends State<Options> {
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 25,
-                color: Colors.white)),
+                color: Colors.black)),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Container(
         padding: EdgeInsets.all(10),
