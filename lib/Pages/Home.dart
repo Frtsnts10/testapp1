@@ -10,34 +10,46 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        elevation: 1,
-        actions: [
-          TextButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Options()));
-              },
-              child: Icon(
-                Icons.settings,
-                color: Colors.black,
-              )),
-        ],
-      ),
-      body: Container(
-          padding: EdgeInsets.only(top:20, left: 20, right: 10),
-          child: Column(children: [
-            Column(children: [
-              Text(
-                'Listen Now',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        
+        body: Container(
+            padding: EdgeInsets.only(top: 20, left: 30, right: 20),
+            child: Column(children: [
+              Row(children: [
+                Container(
+                  child: Text(
+                    'Listen Now',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 90),
+                  child: MaterialButton(
+                    onPressed: () {},
+                    elevation: 2.0,
+                    child: Icon(
+                      Icons.person_outline_rounded,
+                      color: Colors.white,
+                    ),
+                    padding: EdgeInsets.all(10.0),
+                    shape: CircleBorder(),
+                    color: Colors.black,
+                  ),
+                )
+              ]),
+              Divider(
+                color: Colors.black45,
+                endIndent: 20,
+                
               ),
 
-              
-            ])
-          ])),
-    );
+
+              Row(
+                children: [
+
+                ],
+              )
+            ],
+            )));
   }
 }
