@@ -4,13 +4,14 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
+          elevation: 0,
+        ),
         backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-      ),
-        backgroundColor: Colors.white,
-        body: Container(
+        body: SafeArea(
+            child: Container(
           padding: EdgeInsets.only(top: 50),
           child: Center(
               child: Column(children: [
@@ -122,17 +123,16 @@ class Profile extends StatelessWidget {
                     color: Color(0xFF1DD860),
                     onPressed: () {
                       Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Edit()));
+                          MaterialPageRoute(builder: (context) => Edit()));
                     },
                   ),
                 )
               ],
             ),
           ])),
-        ));
+        )));
   }
 }
-
 
 class Edit extends StatefulWidget {
   @override
@@ -142,8 +142,6 @@ class Edit extends StatefulWidget {
 class _EditState extends State<Edit> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }

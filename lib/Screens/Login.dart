@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:testapp1/MenuNavigation.dart';
 import 'package:testapp1/Pages/Home.dart';
-import 'package:testapp1/Screens/Forget.dart';
-import 'package:testapp1/Screens/SignUp.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -13,74 +12,49 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: Container(
-          padding: EdgeInsets.fromLTRB(30, 80, 30, 0),
-          child: Column(
-            children: [
-
-              //Email and TextField
-              Column(
-                children: [
-
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      'Email or username',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+      appBar: AppBar(backgroundColor: Colors.black, elevation: 0),
+      backgroundColor: Colors.black,
+      body: SafeArea(
+          child: Container(
+        padding: EdgeInsets.only(top: 250, left: 40, right: 40),
+        child: Column(
+          children: [
+            Column(
+              children: [
+                Text('Username or Email',
+                    style: TextStyle(
+                        color: Colors.white,
                         fontSize: 20,
-                      ),
-                    ),
+                        fontWeight: FontWeight.bold)),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Username or Email',
                   ),
-                  Container(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(30),
-                            right: Radius.circular(30),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-              //Password and TextField
-              Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      'Password',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                )
+              ],
+            ),
+            Column(
+              children: [
+                Text('Password',
+                    style: TextStyle(
+                        color: Colors.white,
                         fontSize: 20,
-                      ),
-                    ),
+                        fontWeight: FontWeight.bold)),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
                   ),
-                  Container(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.horizontal(
-                            left: Radius.circular(30),
-                            right: Radius.circular(30),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-
-              Container(
-                padding: EdgeInsets.all(20),
-                child: ElevatedButton(
+                  
+                )
+              ],
+            ),
+            SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -88,17 +62,10 @@ class _LoginState extends State<Login> {
                           builder: (context) => MenuScreen(),
                         ));
                   },
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
+                  icon: Icon(Ionicons.log_in_outline),
+                  label: Text('Login', style: TextStyle(color: Colors.white)),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.green),
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
+                    backgroundColor: MaterialStateProperty.all(Colors.redAccent),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.horizontal(
@@ -108,73 +75,10 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                ),
-              ),
-
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Forget(),
-                        ));
-                  },
-                  child: Text(
-                    "Forgot Password",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                  ),
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignUp(),
-                        ));
-                  },
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ));
+                ))
+          ],
+        ),
+      )),
+    );
   }
 }
