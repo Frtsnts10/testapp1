@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:testapp1/MenuNavigation.dart';
 import 'package:testapp1/Pages/Home.dart';
-import 'package:testapp1/Screens/Forget.dart';
-import 'package:testapp1/Screens/SignUp.dart';
 
-class Login extends StatefulWidget {
+class SignUp extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
-}
+  _SignUpState createState() => _SignUpState();
+  }
+  
+ 
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
         body: Container(
           padding: EdgeInsets.fromLTRB(30, 80, 30, 0),
-          child: Column(
+          child: 
+          Column(
             children: [
 
-              //Email and TextField
               Column(
                 children: [
 
                   Container(
                     padding: EdgeInsets.all(20),
                     child: Text(
-                      'Email or username',
+                      'Username',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -48,7 +48,62 @@ class _LoginState extends State<Login> {
                   ),
                 ],
               ),
+              Column(
+                children: [
 
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      'Email',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(30),
+                            right: Radius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      'Phone Number',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(30),
+                            right: Radius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               //Password and TextField
               Column(
                 children: [
@@ -89,7 +144,7 @@ class _LoginState extends State<Login> {
                         ));
                   },
                   child: Text(
-                    "Login",
+                    "Sign Up",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -107,69 +162,6 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
-
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Forget(),
-                        ));
-                  },
-                  child: Text(
-                    "Forgot Password",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                  ),
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignUp(),
-                        ));
-                  },
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
                   ),
                 ),
               ),

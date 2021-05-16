@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:testapp1/MenuNavigation.dart';
-import 'package:testapp1/Pages/Home.dart';
-import 'package:testapp1/Screens/Forget.dart';
-import 'package:testapp1/Screens/SignUp.dart';
+import 'Login.dart';
 
-class Login extends StatefulWidget {
+class Forget extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _ForgetState createState() => _ForgetState();
 }
 
-class _LoginState extends State<Login> {
+class _ForgetState extends State<Forget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +23,35 @@ class _LoginState extends State<Login> {
                   Container(
                     padding: EdgeInsets.all(20),
                     child: Text(
-                      'Email or username',
+                      'Email or Username or Phone Number',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.horizontal(
+                            left: Radius.circular(30),
+                            right: Radius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+Column(
+                children: [
+
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      'New Password',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -55,7 +80,7 @@ class _LoginState extends State<Login> {
                   Container(
                     padding: EdgeInsets.all(20),
                     child: Text(
-                      'Password',
+                      'Confirm New Password',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -85,11 +110,11 @@ class _LoginState extends State<Login> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MenuScreen(),
+                          builder: (context) => Login(),
                         ));
                   },
                   child: Text(
-                    "Login",
+                    "Reset Password",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -111,68 +136,6 @@ class _LoginState extends State<Login> {
                 ),
               ),
 
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Forget(),
-                        ));
-                  },
-                  child: Text(
-                    "Forgot Password",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                  ),
-                ),
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SignUp(),
-                        ));
-                  },
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                        EdgeInsets.fromLTRB(50, 10, 50, 10)),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.horizontal(
-                          left: Radius.circular(30),
-                          right: Radius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                  ),
-                ),
-              ),
             ],
           ),
         ));
