@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:testapp1/Pages/Profile.dart';
+
+import 'Profile.dart';
 
 class Home extends StatefulWidget {
   @override

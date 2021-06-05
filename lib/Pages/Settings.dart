@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:testapp1/Models/OptionModels.dart';
+
+import '../Models/OptionModels.dart';
 
 class Options extends StatefulWidget {
   @override
@@ -24,14 +25,15 @@ class _OptionsState extends State<Options> {
         title: Text('Settings',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 25,
+                fontSize: 30,
                 color: Colors.black)),
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Container(
-        padding: EdgeInsets.all(10),
+      body: SafeArea(
+        child: Container(
+        padding: EdgeInsets.only(left: 20, right: 20, top: 40),
         child: ListView.builder(
           itemCount: options.length + 2,
           itemBuilder: (BuildContext context, int index) {
@@ -62,14 +64,7 @@ class _OptionsState extends State<Options> {
                         : Colors.grey[600],
                   ),
                 ),
-                subtitle: Text(
-                  options[index - 1].subtitle,
-                  style: TextStyle(
-                    color: _selectedOption == index - 1
-                        ? Colors.black
-                        : Colors.grey,
-                  ),
-                ),
+                
                 selected: _selectedOption == index - 1,
                 onTap: () {
                   setState(() {
@@ -81,6 +76,6 @@ class _OptionsState extends State<Options> {
           },
         ),
       ),
-    );
+    ));
   }
 }

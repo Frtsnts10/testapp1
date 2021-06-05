@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:testapp1/Pages/Home.dart';
-import 'package:testapp1/Pages/Library.dart';
-import 'package:testapp1/Pages/Profile.dart';
-import 'package:testapp1/Pages/Search.dart';
-import 'package:testapp1/Pages/Settings.dart';
+import 'Pages/Home.dart';
+import 'Pages/Library.dart';
+import 'Pages/Profile.dart';
+import 'Pages/Search.dart';
+import 'Pages/Settings.dart';
 
 class MenuScreen extends StatefulWidget {
   @override

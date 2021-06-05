@@ -19,14 +19,12 @@ class Profile extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 70,
-                  backgroundImage: NetworkImage(
-                      "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1276&q=80"),
                 ),
                 SizedBox(
                   height: 40.0,
                 ),
                 Text(
-                  "Doctor Code",
+                  "User",
                   style: TextStyle(color: Colors.black, fontSize: 28.0),
                 ),
               ],
@@ -42,7 +40,7 @@ class Profile extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            "501",
+                            "0",
                             style:
                                 TextStyle(color: Colors.black, fontSize: 20.0),
                           ),
@@ -63,7 +61,7 @@ class Profile extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            "20.1K",
+                            "0",
                             style:
                                 TextStyle(color: Colors.black, fontSize: 20.0),
                           ),
@@ -84,7 +82,7 @@ class Profile extends StatelessWidget {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            "1.2k",
+                            "0",
                             style:
                                 TextStyle(color: Colors.black, fontSize: 20.0),
                           ),

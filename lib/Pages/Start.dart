@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:testapp1/Screens/Login.dart';
-import 'package:testapp1/Screens/SignUp.dart';
+
+import '../Screens/Login.dart';
+import '../Screens/SignUp.dart';
 
 class Starter extends StatefulWidget {
   @override
@@ -12,7 +13,8 @@ class _StarterState extends State<Starter> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(backgroundColor: Colors.black, elevation: 0),
+        appBar: AppBar(backgroundColor: Colors.black, elevation: 0,
+        automaticallyImplyLeading: false,),
         body: SafeArea(
             child: Container(
                 padding: EdgeInsets.only(left: 40, right: 40, top: 200),
