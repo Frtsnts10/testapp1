@@ -1,7 +1,7 @@
-import 'package:testapp1/Pages/Start.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:testapp1/Screens/Forget.dart';
+import 'package:testapp1/main.dart';
 import '../MenuNavigation.dart';
 
 class SignUp extends StatefulWidget {
@@ -46,7 +46,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Starter()));
+                      MaterialPageRoute(builder: (context) => Start()));
                 },
               ),
               
